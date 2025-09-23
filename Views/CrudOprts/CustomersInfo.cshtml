@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "CustomersInfo";
+}
+
+@section scripts{
+    <script>
+        $('#CustomerInfoTb').DataTable({
+            processing: true,
+            //pagination: true,
+            serverSide: true,
+            //ordering: true,
+            //filtering: true,
+            ajax: {
+                url: "/CrudOprts/getCustomersInfo",
+                type: "POST",
+                //dataType: "Json",
+                //contentType:"application/json",
+                //data: function (d) {
+                //    return JSON.stringify(d);
+                //},
+                //success: function (response) {
+                //    console.log(response);
+                //    return response;
+                //},
+                errorPlacement: function () {
+
+                }
+            },
+            columns: [
+                {data : "Id"},
+                {data : "CustomerName"},
+                {
+                    data: "DOB"
+                    //render: function (data) {
+                    //    let date = new Date(parseInt(data.substr(6)));
+                    //    return date.toLocaleDateString();
+                    //}
+                },
+                { data: "CustomerAddress"},
+                { data: "PhoneNo"},
+                { data: "EmailAddress" }
+            ]
+
+        });
+    </script>
+}
+
+<div class="col-lg-12">
+    <table class="table table-responsive display" id="CustomerInfoTb">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>CustomerName</th>
+                <th>DOB</th>
+                <th>CustomerAddress</th>
+                <th>PhoneNo</th>
+                <th>EmailAddress</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+
+
+
+

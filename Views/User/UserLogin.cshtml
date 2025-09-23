@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "UserLogin";
+}
+
+<style>
+/*    .container-center{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
+    }*/
+/*    form{
+        text-align:center;
+        height: 70vh;
+    }*/
+</style>
+
+<div class="container-center">
+    <form action="" method="get" style="height: 70vh;background: var(--bs-gray-200); width: 450px; margin: 50px auto;">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-6">
+                    <label for="">UserName :</label>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Username" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <label for="">EmailAddress :</label>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter EmailAddress" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <button type="submit" class="data-bs-dismiss=" modal"">Login</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+@Scripts.Render("~/bundles/bootstraps")
+
